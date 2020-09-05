@@ -1,4 +1,5 @@
 import pygame
+import random
 
 # Initialize the pygame
 pygame.init()
@@ -20,8 +21,8 @@ playerX_change = 0
 # Enemy
 
 enemyImg = pygame.image.load('invader.png')
-enemyX = 370
-enemyY = 50
+enemyX = random.randint(0, 800)
+enemyY = random.randint(50, 150)
 enemyX_change = 0
 
 
