@@ -17,9 +17,20 @@ playerX = 370
 playerY = 480
 playerX_change = 0
 
+# Enemy
+
+enemyImg = pygame.image.load('invader.png')
+enemyX = 370
+enemyY = 50
+enemyX_change = 0
+
 
 def player(x, y):
     screen.blit(playerImg, (x, y))
+
+
+def enemy(x, y):
+    screen.blit(enemyImg, (x, y))
 
 
 # Game Loop
@@ -42,6 +53,7 @@ while running:
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
+
     # 5 = 5 + 0.1 -> 5 = 5 - 0.1
     # 5 = 5 + 0.1
 
@@ -53,4 +65,5 @@ while running:
         playerX = 736
 
     player(playerX, playerY)
+    enemy(enemyX, enemyY)
     pygame.display.update()
