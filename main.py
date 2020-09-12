@@ -57,23 +57,23 @@ bullet_state = "ready"
 
 # Score
 score_value = 0
-font = pygame.font.Font('freesansbold.ttf', 32)
+font = pygame.font.Font('8-bit_wonder.ttf', 32)
 
 textX = 10
 textY = 10
 
 # Game Over text
-game_over_font = pygame.font.Font('freesansbold.ttf', 64)
+game_over_font = pygame.font.Font('8-bit_wonder.ttf', 64)
 
 
 def show_score(x, y):
-    score = font.render("Score: " + str(score_value), True, (255, 255, 255))
+    score = font.render("Score * " + str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
 
 
 def game_over_text():
     over_text = game_over_font.render("GAME OVER", True, (255, 255, 255))
-    screen.blit(over_text, (200, 250))
+    screen.blit(over_text, (120, 250))
 
 
 def player(x, y):
